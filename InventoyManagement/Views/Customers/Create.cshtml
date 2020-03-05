@@ -1,0 +1,114 @@
+﻿@model InventoyManagement.Models.CustomersModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>CustomersModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CustomerID" class="control-label"></label>
+                <input asp-for="CustomerID" class="form-control" />
+                <span asp-validation-for="CustomerID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerName" class="control-label"></label>
+                <input asp-for="CustomerName" class="form-control" />
+                <span asp-validation-for="CustomerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerDateOfBirth" class="control-label"></label>
+                <input asp-for="CustomerDateOfBirth" class="form-control" />
+                <span asp-validation-for="CustomerDateOfBirth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerPhoto" class="control-label"></label>
+                <input asp-for="CustomerPhoto" class="form-control" />
+                <span asp-validation-for="CustomerPhoto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerAdd1" class="control-label"></label>
+                <input asp-for="CustomerAdd1" class="form-control" />
+                <span asp-validation-for="CustomerAdd1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerAdd2" class="control-label"></label>
+                <input asp-for="CustomerAdd2" class="form-control" />
+                <span asp-validation-for="CustomerAdd2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerAdd3" class="control-label"></label>
+                <input asp-for="CustomerAdd3" class="form-control" />
+                <span asp-validation-for="CustomerAdd3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerAdd4" class="control-label"></label>
+                <input asp-for="CustomerAdd4" class="form-control" />
+                <span asp-validation-for="CustomerAdd4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerCity" class="control-label"></label>
+                <input asp-for="CustomerCity" class="form-control" />
+                <span asp-validation-for="CustomerCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerState" class="control-label"></label>
+                <input asp-for="CustomerState" class="form-control" />
+                <span asp-validation-for="CustomerState" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerCounty" class="control-label"></label>
+                <input asp-for="CustomerCounty" class="form-control" />
+                <span asp-validation-for="CustomerCounty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerEmail" class="control-label"></label>
+                <input asp-for="CustomerEmail" class="form-control" />
+                <span asp-validation-for="CustomerEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerTelOffice" class="control-label"></label>
+                <input asp-for="CustomerTelOffice" class="form-control" />
+                <span asp-validation-for="CustomerTelOffice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerTelMobile" class="control-label"></label>
+                <input asp-for="CustomerTelMobile" class="form-control" />
+                <span asp-validation-for="CustomerTelMobile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateCreated" class="control-label"></label>
+                <input asp-for="DateCreated" class="form-control" />
+                <span asp-validation-for="DateCreated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateUpdated" class="control-label"></label>
+                <input asp-for="DateUpdated" class="form-control" />
+                <span asp-validation-for="DateUpdated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+              
+                <select asp-for="Status" class="form-control" asp-items="Html.GetEnumSelectList<SystemRef.StatusE>()"></select>
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

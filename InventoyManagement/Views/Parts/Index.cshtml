@@ -1,0 +1,77 @@
+﻿@model IEnumerable<InventoyManagement.Models.PartsModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PartsDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PartsQty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PartsPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PartsSellPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PartsManufactureYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateCreated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateUpdated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PartsStatus)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PartsDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PartsQty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PartsPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PartsSellPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PartsManufactureYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCreated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateUpdated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PartsStatus)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PartsID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PartsID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PartsID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

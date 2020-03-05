@@ -1,0 +1,107 @@
+﻿@model IEnumerable<InventoyManagement.Models.CompaniesModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyAdd1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyAdd2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyAdd3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyAdd4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyState)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyCounty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyTelOffice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateCreated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateUpdated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyAdd1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyAdd2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyAdd3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyAdd4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyState)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyCounty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyTelOffice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCreated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateUpdated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CompanyRegistrationID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CompanyRegistrationID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CompanyRegistrationID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
